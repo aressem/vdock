@@ -7,4 +7,6 @@ RUN yum-config-manager --add-repo https://copr.fedorainfracloud.org/coprs/g/vesp
 
 ADD start-container.sh /usr/local/bin/start-container.sh 
 
+RUN yum install -y vespa-zookeeper-c-client-6.100.2
+
 ENTRYPOINT ["/usr/local/bin/start-container.sh"]
